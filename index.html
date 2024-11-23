@@ -32,7 +32,6 @@
       border-radius: 10px;
       margin: 20px auto;
       max-width: 800px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     }
     button {
       background-color: #2b5d34;
@@ -43,11 +42,9 @@
       font-size: 1.2em;
       cursor: pointer;
       margin-top: 20px;
-      transition: transform 0.2s, background-color 0.2s; /* Animation for buttons */
     }
     button:hover {
       background-color: #1f4b2e;
-      transform: scale(1.1); /* Slight scaling effect */
     }
     img {
       width: 100%;
@@ -72,7 +69,6 @@
       max-width: 800px;
       background-color: rgba(255, 255, 255, 0.8);
       border-radius: 10px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     }
     .faq h2 {
       text-align: center;
@@ -85,12 +81,6 @@
     .faq-details summary {
       font-size: 1.5em;
       cursor: pointer;
-      transition: background-color 0.3s; /* Hover effect */
-    }
-    .faq-details summary:hover {
-      background-color: #d4f5d4;
-      border-radius: 5px;
-      padding: 5px;
     }
     .faq-details p {
       margin-top: 10px;
@@ -114,83 +104,74 @@
       height: 50px;
       font-size: 1.5em;
       cursor: pointer;
-      transition: transform 0.2s, background-color 0.2s;
     }
     .scroll-buttons button:hover {
       background-color: #1f4b2e;
-      transform: scale(1.1); /* Hover effect for scroll buttons */
-    }
-    #progress-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 5px;
-      background-color: #2b5d34;
-      width: 0%;
-      z-index: 1000;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #2b5d34;
-      color: white;
-      padding: 10px 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: white;
-      margin: 0 20px;
-      text-decoration: none;
-      font-size: 1.2em;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      background-color: #2b5d34;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      margin-top: 50px;
     }
   </style>
 </head>
 
 <body>
-  <div id="progress-bar"></div>
-
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="#problem">Problem</a>
-    <a href="#facts">Facts</a>
-    <a href="#actions">Actions</a>
-    <a href="#faq">FAQ</a>
-    <a href="#resources">Resources</a>
-  </nav>
-
   <h1>All About Deforestation</h1>
 
-  <h2 id="problem">Why is Deforestation a Problem?</h2>
-  <p>Deforestation is a major environmental concern that has significant impacts on biodiversity, ecosystems, and climate change...</p>
+  <h2>Why is Deforestation a Problem?</h2>
+  <p>Deforestation is a major environmental concern that has significant impacts on biodiversity, ecosystems, and climate change. The loss of forests results in habitat destruction for countless species, many of which are endangered. Additionally, forests act as carbon sinks, helping to regulate the Earth's climate by absorbing carbon dioxide. When trees are cut down, the stored carbon is released back into the atmosphere, contributing to global warming.</p>
 
-  <!-- (Rest of your original content here...) -->
+  <img src="https://cdn.vectorstock.com/i/500p/82/10/poster-design-with-pollutions-on-earth-vector-27748210.jpg" alt="Deforestation example">
 
-  <!-- Footer -->
-  <footer>
-    <p>🌍 Together, we can make a difference for our forests. 🌱</p>
-    <p>© 2024 All About Deforestation</p>
-  </footer>
+  <div class="facts">
+    <h2>Key Facts About Deforestation</h2>
+    <ul>
+      <li>18 million acres of forests are lost each year, which is roughly equivalent to 27 soccer fields per minute.</li>
+      <li>Deforestation contributes to 15% of global greenhouse gas emissions, making it a major factor in climate change.</li>
+      <li>Rainforests are home to over 50% of the Earth's species, many of which are found nowhere else on the planet.</li>
+      <li>The loss of forests has a direct impact on indigenous communities that depend on them for food, medicine, and shelter.</li>
+      <li>Forests play a crucial role in the water cycle, influencing rainfall patterns and the availability of freshwater resources.</li>
+    </ul>
+  </div>
 
-  <script>
-    // Progress Bar Script
-    window.addEventListener("scroll", function () {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const progress = (scrollTop / scrollHeight) * 100;
-      document.getElementById("progress-bar").style.width = progress + "%";
-    });
-  </script>
+  <h2>What Can You Do?</h2>
+  <p>Small actions can make a big difference in the fight against deforestation. By making conscious choices in our daily lives, we can contribute to preserving our planet's forests. One of the most effective ways to help is by reducing paper waste and supporting sustainable products that are certified by organizations like the Forest Stewardship Council (FSC). Additionally, consider donating to reforestation and conservation projects that are working to restore the world's forests. Every little bit helps!</p>
+  
+  <button onclick="alert('Thank you for caring about the planet!')">Take Action Now</button>
+
+  <h2>Hope for the Future</h2>
+  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate and thrive, they can recover much of the biodiversity and carbon storage capacity that was lost.</p>
+
+  <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation" width="300px">
+
+  <h2>Additional Resources</h2>
+  <p>To learn more about deforestation and how you can help, check out the following websites:</p>
+  <ul>
+    <li><a href="https://www.rainforest-alliance.org/" target="_blank">Rainforest Alliance</a> - An organization working to protect forests and biodiversity through sustainable practices.</li>
+    <li><a href="https://www.worldwildlife.org/threats/deforestation" target="_blank">World Wildlife Fund (WWF) - Deforestation</a> - Learn about the impact of deforestation and how WWF is tackling it.</li>
+    <li><a href="https://www.globalforestwatch.org/" target="_blank">Global Forest Watch</a> - A platform that provides information about forest loss and land use changes worldwide.</li>
+    <li><a href="https://www.treehugger.com/what-is-deforestation-4864916" target="_blank">Treehugger - What is Deforestation?</a> - A comprehensive guide to understanding deforestation, its causes, and its effects.</li>
+  </ul>
+
+  <div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-details">
+      <details>
+        <summary>What are the main causes of deforestation?</summary>
+        <p>Deforestation is primarily caused by agricultural expansion, logging, infrastructure development, and mining. These activities often lead to the clearing of large forested areas.</p>
+      </details>
+      <details>
+        <summary>How does deforestation contribute to climate change?</summary>
+        <p>Forests act as carbon sinks, absorbing CO2 from the atmosphere. When they are destroyed, the stored carbon is released, contributing to greenhouse gas emissions and global warming.</p>
+      </details>
+      <details>
+        <summary>What can individuals do to combat deforestation?</summary>
+        <p>Individuals can reduce paper waste, choose sustainable products, support reforestation projects, and advocate for policies that protect forests.</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="scroll-buttons">
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+    <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">↓</button>
+  </div>
 </body>
 </html>
+
+   
