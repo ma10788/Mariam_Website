@@ -7,6 +7,7 @@
       min-height: 100%;
       font-family: Arial, sans-serif;
       padding: 0 20px;
+      scroll-behavior: smooth;
     }
     h1 {
       font-size: 3em;
@@ -40,9 +41,11 @@
       font-size: 1.2em;
       cursor: pointer;
       margin-top: 20px;
+      transition: 0.3s;
     }
     button:hover {
       background-color: #1f4b2e;
+      box-shadow: 0 0 15px rgba(43, 93, 52, 0.6);
     }
     img {
       width: 100%;
@@ -60,6 +63,55 @@
     }
     a:hover {
       text-decoration: underline;
+    }
+    .scroll-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      border: none;
+      border-radius: 50%;
+      background: radial-gradient(circle, #2b5d34, #1f4b2e);
+      color: white;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+    }
+    .scroll-btn:hover {
+      box-shadow: 0 0 15px rgba(43, 93, 52, 0.8);
+    }
+    .faq-section {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 40px auto;
+    }
+    .faq h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    .faq-details {
+      text-align: left;
+    }
+    .faq-details summary {
+      font-weight: bold;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+    .faq-details summary:hover {
+      color: #2b5d34;
+    }
+    .faq-details p {
+      margin-left: 20px;
+      font-size: 1.2em;
+      color: #333;
     }
   </style>
 </head>
@@ -106,6 +158,18 @@
   <p>While the challenges of deforestation are significant, there is a growing movement around the world to protect forests and encourage sustainable development. By making informed choices, advocating for stronger environmental policies, and supporting conservation efforts, we can help ensure that forests continue to thrive for future generations. The fight against deforestation is a collective effort that requires action at every level—from individuals to governments to businesses.</p>
 
   <p>As we move forward, it’s important to keep in mind that protecting forests isn’t just about saving trees. It’s about saving the entire planet. Forests provide us with clean air, clean water, and a balanced climate, so it’s essential that we take action now before it’s too late.</p>
-</body>
-</html>
 
+  <!-- FAQ Section -->
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <details class="faq-details">
+        <summary>What is deforestation?</summary>
+        <p>Deforestation is the clearing or thinning of forests, often to make way for agriculture, logging, or urban development.</p>
+      </details>
+      <details class="faq-details">
+        <summary>How does deforestation affect climate change?</summary>
+        <p>Forests act as carbon sinks, absorbing CO2 from the atmosphere. Deforestation releases this stored carbon, contributing to global warming.</p>
+      </details>
+      <details class="faq-details">
+        <summary>What are the major causes of deforestation
