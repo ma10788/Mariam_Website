@@ -1,179 +1,111 @@
-<!DOCTYPE html>
-<html>
 <head>
-  <title>All About Deforestation</title>
   <style>
-    /* General Styles */
     body {
       text-align: center;
       background-image: linear-gradient(rgb(164, 229, 122), rgb(152, 255, 247), rgb(218, 175, 130));
+      min-width: 100%;
+      min-height: 100%;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      padding: 0 20px;
     }
-    h1, h2 {
-      margin: 20px;
+    h1 {
+      font-size: 3em;
+      color: #2b5d34;
+      margin-top: 20px;
+    }
+    h2 {
+      font-size: 2em;
+      color: #1f4b2e;
+      margin-top: 30px;
     }
     p {
-      margin: 20px;
-      line-height: 1.6;
+      font-size: 1.5em;
+      color: #333333;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+    .facts {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+    button {
+      background-color: #2b5d34;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #1f4b2e;
     }
     img {
-      width: 80%;
+      width: 100%;
       max-width: 600px;
-      margin: 20px auto;
-      display: block;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
     }
     a {
-      color: darkgreen;
+      color: #2b5d34;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
-
-    /* Button Styles */
-    .button {
-      display: inline-block;
-      margin: 20px 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      color: white;
-      background-color: darkgreen;
-      border: none;
-      border-radius: 5px;
-      box-shadow: 0 0 10px #32CD32, 0 0 20px #32CD32;
-      cursor: pointer;
-    }
-    .button:hover {
-      background-color: limegreen;
-      box-shadow: 0 0 15px #90EE90, 0 0 30px #90EE90;
-    }
-
-    /* Scroll to Top and Bottom Buttons */
-    #scroll-to-top, #scroll-to-bottom {
-      position: fixed;
-      bottom: 20px;
-      padding: 10px 15px;
-      border-radius: 50%;
-      font-size: 18px;
-      color: white;
-      background-color: darkgreen;
-      border: none;
-      cursor: pointer;
-      z-index: 1000;
-    }
-    #scroll-to-top {
-      right: 70px;
-      box-shadow: 0 0 10px green;
-    }
-    #scroll-to-bottom {
-      right: 20px;
-      box-shadow: 0 0 10px green;
-    }
-
-    /* FAQ Section */
-    .faq {
-      text-align: left;
-      margin: 20px auto;
-      max-width: 800px;
-    }
-    .faq h3 {
-      cursor: pointer;
-      background: lightgreen;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .faq h3:hover {
-      background: limegreen;
-    }
-    .faq-content {
-      display: none;
-      padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.8);
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    /* Parallax Section */
-    .parallax {
-      background-image: url('https://via.placeholder.com/1200x800');
-      height: 400px;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      margin-bottom: 20px;
-    }
   </style>
 </head>
+
 <body>
   <h1>All About Deforestation</h1>
-  <p>Deforestation is one of the most critical environmental challenges our planet faces today. Learn how you can help save our forests!</p>
 
-  <div class="parallax"></div>
+  <h2>Why is Deforestation a Problem?</h2>
+  <p>Deforestation is a major environmental concern that has significant impacts on biodiversity, ecosystems, and climate change. The loss of forests results in habitat destruction for countless species, many of which are endangered. Additionally, forests act as carbon sinks, helping to regulate the Earth's climate by absorbing carbon dioxide. When trees are cut down, the stored carbon is released back into the atmosphere, contributing to global warming.</p>
 
-  <h2>Key Facts About Deforestation</h2>
-  <p>18 million acres of forests are lost each year, which is equivalent to 27 soccer fields every minute!</p>
-  <img src="https://via.placeholder.com/600x300" alt="Deforestation illustration">
+  <img src="https://cdn.vectorstock.com/i/500p/82/10/poster-design-with-pollutions-on-earth-vector-27748210.jpg" alt="Deforestation example">
 
-  <h2>Additional Resources</h2>
-  <p>Check out these websites to learn more:</p>
-  <ul>
-    <li><a href="https://www.rainforest-alliance.org/" target="_blank">Rainforest Alliance</a></li>
-    <li><a href="https://www.worldwildlife.org/initiatives/forests" target="_blank">World Wildlife Fund</a></li>
-    <li><a href="https://www.globalforestwatch.org/" target="_blank">Global Forest Watch</a></li>
-    <li><a href="https://www.treehugger.com/what-is-deforestation-4863964" target="_blank">Treehugger: What is Deforestation?</a></li>
-  </ul>
-
-  <h2>FAQ Section</h2>
-  <div class="faq">
-    <h3>What is deforestation?</h3>
-    <div class="faq-content">
-      <p>Deforestation is the clearing or thinning of forests by humans to make way for agriculture, urban use, or other purposes.</p>
-    </div>
-    <h3>Why is deforestation harmful?</h3>
-    <div class="faq-content">
-      <p>Deforestation disrupts ecosystems, contributes to climate change, and leads to the loss of biodiversity.</p>
-    </div>
-    <h3>How can I help?</h3>
-    <div class="faq-content">
-      <p>You can help by planting trees, reducing paper use, and supporting organizations that fight deforestation.</p>
-    </div>
+  <div class="facts">
+    <h2>Key Facts About Deforestation</h2>
+    <ul>
+      <li>18 million acres of forests are lost each year, which is roughly equivalent to 27 soccer fields per minute.</li>
+      <li>Deforestation contributes to 15% of global greenhouse gas emissions, making it a major factor in climate change.</li>
+      <li>Rainforests are home to over 50% of the Earth's species, many of which are found nowhere else on the planet.</li>
+      <li>The loss of forests has a direct impact on indigenous communities that depend on them for food, medicine, and shelter.</li>
+      <li>Forests play a crucial role in the water cycle, influencing rainfall patterns and the availability of freshwater resources.</li>
+    </ul>
   </div>
 
-  <h2>Take Action Now</h2>
-  <button class="button" onclick="alert('Thank you for taking action!')">Pledge to Protect Forests</button>
+  <h2>What Can You Do?</h2>
+  <p>Small actions can make a big difference in the fight against deforestation. By making conscious choices in our daily lives, we can contribute to preserving our planet's forests. One of the most effective ways to help is by reducing paper waste and supporting sustainable products that are certified by organizations like the Forest Stewardship Council (FSC). Additionally, consider donating to reforestation and conservation projects that are working to restore the world's forests. Every little bit helps!</p>
+  
+  <button onclick="alert('Thank you for caring about the planet!')">Take Action Now</button>
 
-  <button id="scroll-to-top" onclick="scrollToTop()">⬆</button>
-  <button id="scroll-to-bottom" onclick="scrollToBottom()">⬇</button>
+  <h2>Hope for the Future</h2>
+  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate and thrive, they can recover much of the biodiversity and carbon storage capacity that was lost.</p>
 
-  <script>
-    // Smooth Scroll to Top
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+  <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation" width="300px">
 
-    // Smooth Scroll to Bottom
-    function scrollToBottom() {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
+  <h2>Additional Resources</h2>
+  <p>To learn more about deforestation and how you can help, check out the following websites:</p>
+  <ul>
+    <li><a href="https://www.rainforest-alliance.org/" target="_blank">Rainforest Alliance</a> - An organization working to protect forests and biodiversity through sustainable practices.</li>
+    <li><a href="https://www.worldwildlife.org/threats/deforestation" target="_blank">World Wildlife Fund (WWF) - Deforestation</a> - Learn about the impact of deforestation and how WWF is tackling it.</li>
+    <li><a href="https://www.globalforestwatch.org/" target="_blank">Global Forest Watch</a> - A platform that provides information about forest loss and land use changes worldwide.</li>
+    <li><a href="https://www.treehugger.com/what-is-deforestation-4864916" target="_blank">Treehugger - What is Deforestation?</a> - A comprehensive guide to understanding deforestation, its causes, and its effects.</li>
+  </ul>
 
-    // FAQ Toggle
-    const faqs = document.querySelectorAll('.faq h3');
-    faqs.forEach(faq => {
-      faq.addEventListener('click', () => {
-        const content = faq.nextElementSibling;
-        if (content.style.display === 'block') {
-          content.style.display = 'none';
-        } else {
-          content.style.display = 'block';
-        }
-      });
-    });
-  </script>
+  <h2>The Future of Forests</h2>
+  <p>While the challenges of deforestation are significant, there is a growing movement around the world to protect forests and encourage sustainable development. By making informed choices, advocating for stronger environmental policies, and supporting conservation efforts, we can help ensure that forests continue to thrive for future generations. The fight against deforestation is a collective effort that requires action at every level—from individuals to governments to businesses.</p>
+
+  <p>As we move forward, it’s important to keep in mind that protecting forests isn’t just about saving trees. It’s about saving the entire planet. Forests provide us with clean air, clean water, and a balanced climate, so it’s essential that we take action now before it’s too late.</p>
 </body>
 </html>
-
 
