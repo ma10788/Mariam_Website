@@ -156,10 +156,16 @@
       text-align: center;
       margin-top: 50px;
     }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 2em;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      color: #d4f5d4;
+    }
   </style>
-
-  <!-- Add Font Awesome for Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
@@ -208,46 +214,50 @@
     <li><a href="https://www.rainforest-alliance.org/" target="_blank">Rainforest Alliance</a> - An organization working to protect forests and biodiversity through sustainable practices.</li>
     <li><a href="https://www.worldwildlife.org/threats/deforestation" target="_blank">World Wildlife Fund (WWF) - Deforestation</a> - Learn about the impact of deforestation and how WWF is tackling it.</li>
     <li><a href="https://www.globalforestwatch.org/" target="_blank">Global Forest Watch</a> - A platform that provides information about forest loss and land use changes worldwide.</li>
-    <li><a href="https://www.earthday.org/campaigns/deforestation/" target="_blank">Earth Day Network - Deforestation</a> - Resources for getting involved in the fight against deforestation.</li>
+    <li><a href="https://www.earthday.org/campaigns/trees/" target="_blank">Earth Day - Trees Campaign</a> - Join the global effort to plant and protect trees.</li>
   </ul>
 
+  <!-- Social Media Links -->
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank">🌍</a>
+    <a href="https://twitter.com" target="_blank">🐦</a>
+    <a href="https://www.instagram.com" target="_blank">📸</a>
+  </div>
+
+  <!-- FAQ Section -->
   <div class="faq" id="faq">
-    <h2>Frequently Asked Questions</h2>
+    <h2>Frequently Asked Questions (FAQ)</h2>
     <div class="faq-details">
-      <details>
-        <summary>What are the main causes of deforestation?</summary>
-        <p>The primary causes of deforestation include agriculture (especially for crops like soy and palm oil), logging, mining, and infrastructure development.</p>
-      </details>
-      <details>
-        <summary>How can deforestation affect local communities?</summary>
-        <p>Deforestation can lead to the loss of resources that local communities depend on, such as food, medicine, and water. It can also disrupt livelihoods that rely on healthy forests.</p>
-      </details>
-      <details>
-        <summary>Can deforestation be reversed?</summary>
-        <p>Yes, through reforestation and sustainable land management practices, deforestation can be reversed over time. However, it requires large-scale efforts and long-term commitment from governments, organizations, and individuals.</p>
-      </details>
+      <summary>What causes deforestation?</summary>
+      <p>Deforestation is caused by various factors, including agriculture (especially palm oil and soy plantations), logging for timber and paper products, infrastructure development (roads, urbanization), and mining.</p>
+    </div>
+    <div class="faq-details">
+      <summary>Can deforestation be reversed?</summary>
+      <p>Yes, through reforestation efforts and sustainable land management practices, forests can regenerate over time. However, the process is slow and requires careful planning and investment.</p>
     </div>
   </div>
 
   <!-- Scroll Buttons -->
   <div class="scroll-buttons">
-    <button onclick="window.scrollTo(0, 0)"><i class="fas fa-arrow-up"></i></button>
-    <button onclick="window.scrollTo(0, document.body.scrollHeight)"><i class="fas fa-arrow-down"></i></button>
+    <button onclick="window.scrollTo(0, 0)">↑</button>
+    <button onclick="window.scrollTo(0, document.body.scrollHeight)">↓</button>
   </div>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 All About Deforestation. All rights reserved.</p>
+    <p>🌍 Together, we can make a difference for our forests. 🌱</p>
+    <p>© 2024 All About Deforestation</p>
   </footer>
 
   <script>
-    window.onscroll = function() {
-      var progressBar = document.getElementById("progress-bar");
-      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrollPosition = window.scrollY;
-      var scrollPercentage = (scrollPosition / scrollHeight) * 100;
-      progressBar.style.width = scrollPercentage + "%";
-    };
+    // Progress Bar Script
+    window.addEventListener("scroll", function () {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progress-bar").style.width = progress + "%";
+    });
   </script>
-
 </body>
 </html>
+
