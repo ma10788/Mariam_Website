@@ -43,7 +43,7 @@
       font-size: 1.2em;
       cursor: pointer;
       margin-top: 20px;
-      transition: transform 0.2s, background-color 0.2s;
+      transition: transform 0.3s, background-color 0.3s;
     }
     button:hover {
       background-color: #1f4b2e;
@@ -84,12 +84,13 @@
     .faq-details summary {
       font-size: 1.5em;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.3s;
     }
     .faq-details summary:hover {
       background-color: #d4f5d4;
       border-radius: 5px;
       padding: 5px;
+      transform: scale(1.05);
     }
     .faq-details p {
       margin-top: 10px;
@@ -113,7 +114,7 @@
       height: 50px;
       font-size: 1.5em;
       cursor: pointer;
-      transition: transform 0.2s, background-color 0.2s;
+      transition: transform 0.3s, background-color 0.3s;
     }
     .scroll-buttons button:hover {
       background-color: #1f4b2e;
@@ -155,6 +156,23 @@
       padding: 20px;
       text-align: center;
       margin-top: 50px;
+    }
+    .testimonials {
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+    }
+    .testimonials h2 {
+      font-size: 2.5em;
+      color: #2b5d34;
+      margin-bottom: 20px;
+    }
+    blockquote {
+      font-style: italic;
+      margin: 20px 0;
+      color: #333;
     }
   </style>
 </head>
@@ -199,44 +217,51 @@
 
   <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation" width="300px">
 
-  <h2 id="resources">Additional Resources</h2>
-  <p>To learn more about deforestation and how you can help, check out the following websites:</p>
-  <ul>
-    <li><a href="https://www.rainforest-alliance.org/" target="_blank">Rainforest Alliance</a> - An organization working to protect forests and biodiversity through sustainable practices.</li>
-    <li><a href="https://www.worldwildlife.org/threats/deforestation" target="_blank">World Wildlife Fund (WWF) - Deforestation</a> - Learn about the impact of deforestation and how WWF is tackling it.</li>
-    <li><a href="https://www.globalforestwatch.org/" target="_blank">Global Forest Watch</a> - A platform that provides information about forest loss and land use changes worldwide.</li>
-    <li><a href="https://www.earthday.org/campaigns/trees/" target="_blank">Earth Day - Trees Campaign</a> - Join the global effort to plant and protect trees.</li>
-  </ul>
+  <!-- Testimonial Section -->
+  <div class="testimonials">
+    <h2>What People Are Saying</h2>
+    <blockquote>
+      "Joining a reforestation campaign changed my perspective. Every tree matters!" – Maria L.
+    </blockquote>
+    <blockquote>
+      "Deforestation impacts us all. It's time to act!" – John K.
+    </blockquote>
+  </div>
 
   <!-- FAQ Section -->
   <div class="faq" id="faq">
-    <h2>Frequently Asked Questions (FAQ)</h2>
-    <div class="faq-details">
-      <summary>What causes deforestation?</summary>
-      <p>Deforestation is caused by various factors, including agriculture (especially palm oil and soy plantations), logging for timber and paper products, infrastructure development (roads, urbanization), and mining.</p>
-    </div>
-    <div class="faq-details">
-      <summary>Can deforestation be reversed?</summary>
-      <p>Yes, through reforestation efforts and sustainable land management practices, forests can regenerate over time. However, the process is slow and requires careful planning and investment.</p>
-    </div>
+    <h2>Frequently Asked Questions</h2>
+    <details class="faq-details">
+      <summary>Why is deforestation so widespread?</summary>
+      <p>Deforestation occurs primarily due to the demand for agricultural land, timber, and urban expansion. Unsustainable practices and illegal logging exacerbate the problem.</p>
+    </details>
+    <details class="faq-details">
+      <summary>What are the main solutions?</summary>
+      <p>Solutions include reforestation, enforcing laws against illegal logging, supporting sustainable products, and educating communities about forest conservation.</p>
+    </details>
   </div>
 
-  <!-- Footer -->
+  <!-- Resources -->
+  <div id="resources">
+    <h2>Resources</h2>
+    <p>To learn more about deforestation and how you can help, visit:</p>
+    <a href="https://www.worldwildlife.org/initiatives/forests">WWF Forest Initiative</a>
+    <a href="https://www.rainforest-alliance.org/">Rainforest Alliance</a>
+    <a href="https://onetreeplanted.org/">One Tree Planted</a>
+  </div>
+
   <footer>
-    <p>🌍 Together, we can make a difference for our forests. 🌱</p>
-    <p>© 2024 All About Deforestation</p>
+    <p>© 2024 All About Deforestation. All rights reserved.</p>
   </footer>
 
   <script>
-    // Progress Bar Script
-    window.addEventListener("scroll", function () {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const progress = (scrollTop / scrollHeight) * 100;
-      document.getElementById("progress-bar").style.width = progress + "%";
+    // Progress Bar
+    window.addEventListener("scroll", function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrolled = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progress-bar").style.width = scrolled + "%";
     });
   </script>
 </body>
 </html>
-
-   
