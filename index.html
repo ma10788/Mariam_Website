@@ -156,14 +156,10 @@
       text-align: center;
       margin-top: 50px;
     }
-    footer .social-icons a {
-      margin: 0 15px;
-      color: white;
-      font-size: 2em;
-      text-decoration: none;
-    }
-    footer .social-icons a:hover {
-      color: #b5e6b5;
+    .tree-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
     }
   </style>
 </head>
@@ -182,13 +178,13 @@
 
   <h1><br>All About Deforestation</h1>
 
-  <h2 id="problem">Why is Deforestation a Problem?</h2>
+  <h2 id="problem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Tree_icon.svg/120px-Tree_icon.svg.png" class="tree-icon">Why is Deforestation a Problem?</h2>
   <p>Deforestation is a major environmental concern that has significant impacts on biodiversity, ecosystems, and climate change. The loss of forests results in habitat destruction for countless species, many of which are endangered. Additionally, forests act as carbon sinks, helping to regulate the Earth's climate by absorbing carbon dioxide. When trees are cut down, the stored carbon is released back into the atmosphere, contributing to global warming.</p>
 
   <img src="https://cdn.vectorstock.com/i/500p/82/10/poster-design-with-pollutions-on-earth-vector-27748210.jpg" alt="Deforestation example">
 
   <div class="facts" id="facts">
-    <h2>Key Facts About Deforestation</h2>
+    <h2><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Tree_icon.svg/120px-Tree_icon.svg.png" class="tree-icon">Key Facts About Deforestation</h2>
     <ul>
       <li>18 million acres of forests are lost each year, which is roughly equivalent to 27 soccer fields per minute.</li>
       <li>Deforestation contributes to 15% of global greenhouse gas emissions, making it a major factor in climate change.</li>
@@ -198,7 +194,7 @@
     </ul>
   </div>
 
-  <h2 id="actions">What Can You Do?</h2>
+  <h2 id="actions"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Tree_icon.svg/120px-Tree_icon.svg.png" class="tree-icon">What Can You Do?</h2>
   <p>Small actions can make a big difference in the fight against deforestation. By making conscious choices in our daily lives, we can contribute to preserving our planet's forests. One of the most effective ways to help is by reducing paper waste and supporting sustainable products that are certified by organizations like the Forest Stewardship Council (FSC). Additionally, consider donating to reforestation and conservation projects that are working to restore the world's forests. Every little bit helps!</p>
   
   <button onclick="alert('Thank you for caring about the planet!')">Take Action Now</button>
@@ -208,65 +204,48 @@
 
   <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation" width="300px">
 
-  <h2 id="resources">Additional Resources</h2>
+  <h2 id="resources"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Tree_icon.svg/120px-Tree_icon.svg.png" class="tree-icon">Additional Resources</h2>
   <p>To learn more about deforestation and how you can help, check out the following websites:</p>
   <ul>
     <li><a href="https://www.rainforest-alliance.org/" target="_blank">Rainforest Alliance</a> - An organization working to protect forests and biodiversity through sustainable practices.</li>
     <li><a href="https://www.worldwildlife.org/threats/deforestation" target="_blank">World Wildlife Fund (WWF) - Deforestation</a> - Learn about the impact of deforestation and how WWF is tackling it.</li>
     <li><a href="https://www.globalforestwatch.org/" target="_blank">Global Forest Watch</a> - A platform that provides information about forest loss and land use changes worldwide.</li>
-    <li><a href="https://www.earthday.org/campaigns/trees/" target="_blank">Earth Day - Trees Campaign</a> - Join the movement to plant and protect trees.</li>
+    <li><a href="https://www.earthday.org/campaigns/trees/" target="_blank">Earth Day - Trees Campaign</a> - Join the global effort to plant and protect trees.</li>
   </ul>
 
   <!-- FAQ Section -->
   <div class="faq" id="faq">
-    <h2>Frequently Asked Questions</h2>
+    <h2>Frequently Asked Questions (FAQ)</h2>
     <div class="faq-details">
-      <details>
-        <summary>What is deforestation?</summary>
-        <p>Deforestation is the clearing or removal of forests to make way for land development, agriculture, and other human activities.</p>
-      </details>
-      <details>
-        <summary>How does deforestation affect wildlife?</summary>
-        <p>Deforestation destroys the natural habitats of many species, pushing them toward extinction. It also reduces biodiversity and disrupts ecosystems.</p>
-      </details>
-      <details>
-        <summary>Can deforestation be stopped?</summary>
-        <p>While it may not be possible to stop all deforestation, we can take steps to reduce it by supporting sustainable practices, protecting existing forests, and promoting reforestation efforts.</p>
-      </details>
+      <summary>What causes deforestation?</summary>
+      <p>Deforestation is caused by various factors, including agriculture (especially palm oil and soy plantations), logging for timber and paper products, infrastructure development (roads, urbanization), and mining.</p>
+    </div>
+    <div class="faq-details">
+      <summary>Can deforestation be reversed?</summary>
+      <p>Yes, through reforestation efforts and sustainable land management practices, forests can regenerate over time. However, the process is slow and requires careful planning and investment.</p>
     </div>
   </div>
 
-  <!-- Social Media Links -->
+  <!-- Scroll Buttons -->
+  <div class="scroll-buttons">
+    <button onclick="window.scrollTo(0, 0)">↑</button>
+    <button onclick="window.scrollTo(0, document.body.scrollHeight)">↓</button>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <div class="social-icons">
-      <a href="https://www.facebook.com" target="_blank">📘</a>
-      <a href="https://www.twitter.com" target="_blank">🐦</a>
-      <a href="https://www.instagram.com" target="_blank">📸</a>
-      <a href="https://www.linkedin.com" target="_blank">🔗</a>
-    </div>
+    <p>🌍 Together, we can make a difference for our forests. 🌱</p>
+    <p>© 2024 All About Deforestation</p>
   </footer>
 
-  <div class="scroll-buttons">
-    <button onclick="scrollToTop()">↑</button>
-    <button onclick="scrollToBottom()">↓</button>
-  </div>
-
   <script>
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function scrollToBottom() {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
-
-    // Progress Bar
-    window.onscroll = function() {
-      var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-      var windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrollPercentage = (scrollPosition / windowHeight) * 100;
-      document.getElementById('progress-bar').style.width = scrollPercentage + '%';
-    }
+    // Progress Bar Script
+    window.addEventListener("scroll", function () {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progress-bar").style.width = progress + "%";
+    });
   </script>
 </body>
 </html>
