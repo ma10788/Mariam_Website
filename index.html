@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All About Deforestation</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
       text-align: center;
@@ -24,20 +23,13 @@
       font-size: 2em;
       color: #1f4b2e;
       margin-top: 30px;
+      animation: fadeIn 1s ease-in;
     }
     p {
       font-size: 1.5em;
       color: #333333;
       margin: 20px auto;
       max-width: 800px;
-    }
-    .fade-in {
-      animation: fadeIn 1s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
     }
     .facts {
       background-color: rgba(255, 255, 255, 0.8);
@@ -61,50 +53,91 @@
       background-color: #1f4b2e;
       transform: scale(1.1);
     }
-    .quiz {
-      margin: 20px auto;
+    img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    a {
+      color: #2b5d34;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .faq {
+      margin: 50px auto;
       padding: 20px;
+      max-width: 800px;
       background-color: rgba(255, 255, 255, 0.8);
       border-radius: 10px;
-      max-width: 800px;
     }
-    .quiz h2 {
-      font-size: 2em;
-      color: #1f4b2e;
+    .faq h2 {
+      text-align: center;
+      font-size: 2.5em;
     }
-    .quiz p {
+    .faq-details {
+      margin: 20px 0;
+      text-align: left;
+    }
+    .faq-details summary {
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .faq-details summary:hover {
+      background-color: #d4f5d4;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    .faq-details p {
+      margin-top: 10px;
       font-size: 1.2em;
     }
-    .quiz input {
+    .quiz {
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+    }
+    .quiz h2 {
+      font-size: 2.5em;
+    }
+    .quiz-question {
+      margin: 20px 0;
+      text-align: left;
+    }
+    .quiz-question label {
+      display: block;
       margin: 10px 0;
+    }
+    .quiz-button {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
+  <nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#causes">Causes</a>
+    <a href="#effects">Effects</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#faq">FAQ</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+
+  <div id="progress-bar"></div>
+
   <h1>All About Deforestation</h1>
-  
-  <div class="facts fade-in" id="problem">
-    <h2><i class="fas fa-exclamation-triangle"></i> Why is Deforestation a Problem?</h2>
-    <p>Deforestation leads to loss of habitat for millions of species, contributes to climate change, and disrupts the water cycle.</p>
-  </div>
 
-  <div class="facts fade-in" id="causes">
-    <h2><i class="fas fa-tree"></i> Causes of Deforestation</h2>
-    <p>Some major causes include agriculture, logging, and urbanization.</p>
-  </div>
-
-  <div class="facts fade-in" id="effects">
-    <h2><i class="fas fa-globe"></i> Effects of Deforestation</h2>
-    <p>Deforestation can lead to soil erosion, loss of biodiversity, and increased greenhouse gases in the atmosphere.</p>
-  </div>
-
-  <div class="quiz fade-in" id="quiz">
-    <h2><i class="fas fa-question-circle"></i> Quiz on Deforestation</h2>
-    <p>1. What is the main cause of deforestation?</p>
-    <input type="radio" name="q1" value="a"> a) Urbanization<br>
-    <input type="radio" name="q1" value="b"> b) Agriculture<br>
-    <input type="radio" name="q1" value="c"> c) Logging<br>
-    <input type="radio" name="q1" value="d"> d) All of the above<br>
-
-    <p>2.
+  <div class="content">
+    <section id="introduction">
+      <h2>🌳 Introduction</h2>
+      <p>Deforestation is the large
