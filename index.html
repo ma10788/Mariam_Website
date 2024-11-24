@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <style>
@@ -10,6 +10,7 @@
       font-family: Arial, sans-serif;
       padding: 0 20px;
       margin: 0;
+      animation: fadeIn 2s ease-in-out;
     }
     h1 {
       font-size: 3em;
@@ -156,7 +157,51 @@
       text-align: center;
       margin-top: 50px;
     }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Pledge Button */
+    .pledge-btn {
+      background-color: #1f4b2e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 15px 30px;
+      font-size: 1.5em;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .pledge-btn:hover {
+      background-color: #2b5d34;
+      transform: scale(1.1);
+    }
+
+    /* Interactive Progress Bar */
+    #interactive-bar {
+      width: 100%;
+      background-color: #e0e0e0;
+      height: 25px;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+    #progress-bar-interactive {
+      height: 100%;
+      background-color: #2b5d34;
+      width: 0;
+      border-radius: 15px;
+    }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -164,61 +209,54 @@
 
   <!-- Navigation Bar -->
   <nav>
-    <a href="#problem">Problem</a>
-    <a href="#facts">Facts</a>
-    <a href="#actions">Actions</a>
-    <a href="#faq">FAQ</a>
-    <a href="#resources">Resources</a>
+    <a href="#problem"><i class="fas fa-tree"></i> Problem</a>
+    <a href="#facts"><i class="fas fa-info-circle"></i> Facts</a>
+    <a href="#actions"><i class="fas fa-hand-paper"></i> Actions</a>
+    <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+    <a href="#resources"><i class="fas fa-book"></i> Resources</a>
   </nav>
 
-  <h1><br>All About Deforestation</h1>
+  <h1><i class="fas fa-leaf"></i> All About Deforestation</h1>
 
-  <h2 id="problem">Why is Deforestation a Problem?</h2>
-  <p>Deforestation is a major environmental concern that has significant impacts on biodiversity, ecosystems, and climate change. The loss of forests results in habitat destruction for countless species, many of which are endangered. Additionally, forests act as carbon sinks, helping to regulate the Earth's climate by absorbing carbon dioxide. When trees are cut down, the stored carbon is released back into the atmosphere, contributing to global warming.</p>
+  <h2 id="problem"><i class="fas fa-tree"></i> Why is Deforestation a Problem?</h2>
+  <p>Deforestation is a major environmental concern...</p>
 
   <img src="https://cdn.vectorstock.com/i/500p/82/10/poster-design-with-pollutions-on-earth-vector-27748210.jpg" alt="Deforestation example">
 
   <div class="facts" id="facts">
     <h2>Key Facts About Deforestation</h2>
     <ul>
-      <li>18 million acres of forests are lost each year, which is roughly equivalent to 27 soccer fields per minute.</li>
-      <li>Deforestation contributes to 15% of global greenhouse gas emissions, making it a major factor in climate change.</li>
-      <li>Rainforests are home to over 50% of the Earth's species, many of which are found nowhere else on the planet.</li>
-      <li>The loss of forests has a direct impact on indigenous communities that depend on them for food, medicine, and shelter.</li>
-      <li>Forests play a crucial role in the water cycle, influencing rainfall patterns and the availability of freshwater resources.</li>
+      <li>18 million acres of forests are lost each year...</li>
+      <li>Deforestation contributes to 15% of global greenhouse gas emissions...</li>
     </ul>
   </div>
 
-  <h2 id="actions">What Can You Do?</h2>
-  <p>Small actions can make a big difference in the fight against deforestation. By making conscious choices in our daily lives, we can contribute to preserving our planet's forests. One of the most effective ways to help is by reducing paper waste and supporting sustainable products that are certified by organizations like the Forest Stewardship Council (FSC). Additionally, consider donating to reforestation and conservation projects that are working to restore the world's forests. Every little bit helps!</p>
+  <h2 id="actions"><i class="fas fa-hand-paper"></i> What Can You Do?</h2>
+  <p>Small actions can make a big difference...</p>
   
-  <button onclick="alert('Thank you for caring about the planet!')">Take Action Now</button>
+  <button class="pledge-btn" onclick="alert('Thank you for pledging to help protect forests!')">Make Your Pledge</button>
 
   <h2>Hope for the Future</h2>
-  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate and thrive, they can recover much of the biodiversity and carbon storage capacity that was lost.</p>
-
-  <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation" width="300px">
+  <p>There is hope for the future of our planet’s forests...</p>
 
   <h2 id="resources">Additional Resources</h2>
-  <p>To learn more about deforestation and how you can help, check out the following websites:</p>
-  <ul>
-    <li><a href="https://www.rainforest-alliance.org/" target="_blank">Rainforest Alliance</a> - An organization working to protect forests and biodiversity through sustainable practices.</li>
-    <li><a href="https://www.worldwildlife.org/threats/deforestation" target="_blank">World Wildlife Fund (WWF) - Deforestation</a> - Learn about the impact of deforestation and how WWF is tackling it.</li>
-    <li><a href="https://www.globalforestwatch.org/" target="_blank">Global Forest Watch</a> - A platform that provides information about forest loss and land use changes worldwide.</li>
-    <li><a href="https://www.earthday.org/campaigns/trees/" target="_blank">Earth Day - Trees Campaign</a> - Join the global effort to plant and protect trees.</li>
-  </ul>
+  <p>To learn more about deforestation...</p>
 
-  <!-- FAQ Section -->
   <div class="faq" id="faq">
     <h2>Frequently Asked Questions (FAQ)</h2>
     <div class="faq-details">
       <summary>What causes deforestation?</summary>
-      <p>Deforestation is caused by various factors, including agriculture (especially palm oil and soy plantations), logging for timber and paper products, infrastructure development (roads, urbanization), and mining.</p>
+      <p>Deforestation is caused by various factors...</p>
     </div>
     <div class="faq-details">
       <summary>Can deforestation be reversed?</summary>
-      <p>Yes, through reforestation efforts and sustainable land management practices, forests can regenerate over time. However, the process is slow and requires careful planning and investment.</p>
+      <p>Yes, through reforestation efforts...</p>
     </div>
+  </div>
+
+  <!-- Interactive Progress Bar -->
+  <div id="interactive-bar">
+    <div id="progress-bar-interactive"></div>
   </div>
 
   <!-- Scroll Buttons -->
@@ -240,9 +278,11 @@
       const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const progress = (scrollTop / scrollHeight) * 100;
       document.getElementById("progress-bar").style.width = progress + "%";
+      
+      // Interactive Progress Bar
+      const interactiveProgress = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progress-bar-interactive").style.width = interactiveProgress + "%";
     });
   </script>
 </body>
 </html>
-
-
