@@ -145,6 +145,13 @@
       margin: 0 20px;
       text-decoration: none;
       font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    nav a img {
+      height: 20px;
+      vertical-align: middle;
     }
     nav a:hover {
       text-decoration: underline;
@@ -162,12 +169,12 @@
       font-size: 2em;
       text-decoration: none;
     }
+    .social-icons a img {
+      height: 24px;
+      vertical-align: middle;
+    }
     .social-icons a:hover {
       color: #d4f5d4;
-    }
-    .icon {
-      margin-right: 8px;
-      vertical-align: middle;
     }
   </style>
 </head>
@@ -177,18 +184,43 @@
 
   <!-- Navigation Bar -->
   <nav>
-    <a href="#problem"><img class="icon" src="https://img.icons8.com/color/48/000000/problem.png" alt="Problem icon">Problem</a>
-    <a href="#facts"><img class="icon" src="https://img.icons8.com/color/48/000000/list.png" alt="Facts icon">Facts</a>
-    <a href="#actions"><img class="icon" src="https://img.icons8.com/color/48/000000/action.png" alt="Actions icon">Actions</a>
-    <a href="#faq"><img class="icon" src="https://img.icons8.com/color/48/000000/faq.png" alt="FAQ icon">FAQ</a>
-    <a href="#resources"><img class="icon" src="https://img.icons8.com/color/48/000000/resources.png" alt="Resources icon">Resources</a>
+    <a href="#problem"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006530.png" alt="Problem icon">Problem</a>
+    <a href="#facts"><img src="https://cdn-icons-png.flaticon.com/512/992/992652.png" alt="Facts icon">Facts</a>
+    <a href="#actions"><img src="https://cdn-icons-png.flaticon.com/512/3043/3043122.png" alt="Actions icon">Actions</a>
+    <a href="#faq"><img src="https://cdn-icons-png.flaticon.com/512/1013/1013614.png" alt="FAQ icon">FAQ</a>
+    <a href="#resources"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Resources icon">Resources</a>
   </nav>
 
   <h1><br>All About Deforestation</h1>
+
   <h2 id="problem">Why is Deforestation a Problem?</h2>
   <p>Deforestation is a major environmental concern...</p>
 
-  <!-- Add icons to enhance the user experience as needed -->
-  ...
+  <h2 id="faq">FAQ Section</h2>
+  <div class="faq">
+    <div class="faq-details">
+      <summary><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="FAQ icon">What causes deforestation?</summary>
+      <p>Deforestation is caused by...</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook icon">Facebook</a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter icon">Twitter</a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram icon">Instagram</a>
+    </div>
+  </footer>
+
+  <script>
+    // Progress Bar Script
+    window.addEventListener("scroll", function () {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progress-bar").style.width = progress + "%";
+    });
+  </script>
 </body>
 </html>
