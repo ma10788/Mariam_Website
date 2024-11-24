@@ -43,7 +43,7 @@
       font-size: 1.2em;
       cursor: pointer;
       margin-top: 20px;
-      transition: transform 0.3s, background-color 0.3s;
+      transition: transform 0.2s, background-color 0.2s;
     }
     button:hover {
       background-color: #1f4b2e;
@@ -84,13 +84,12 @@
     .faq-details summary {
       font-size: 1.5em;
       cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s;
+      transition: background-color 0.3s;
     }
     .faq-details summary:hover {
       background-color: #d4f5d4;
       border-radius: 5px;
       padding: 5px;
-      transform: scale(1.05);
     }
     .faq-details p {
       margin-top: 10px;
@@ -114,7 +113,7 @@
       height: 50px;
       font-size: 1.5em;
       cursor: pointer;
-      transition: transform 0.3s, background-color 0.3s;
+      transition: transform 0.2s, background-color 0.2s;
     }
     .scroll-buttons button:hover {
       background-color: #1f4b2e;
@@ -130,7 +129,7 @@
       z-index: 1000;
     }
     nav {
-      position: fixed;
+      position: sticky;
       top: 0;
       left: 0;
       width: 100%;
@@ -140,6 +139,7 @@
       z-index: 1000;
       display: flex;
       justify-content: center;
+      animation: fadeIn 1s ease-in-out;
     }
     nav a {
       color: white;
@@ -157,22 +157,24 @@
       text-align: center;
       margin-top: 50px;
     }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
     .testimonials {
-      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 20px;
-      max-width: 800px;
-      background: rgba(255, 255, 255, 0.8);
+      margin: 20px auto;
       border-radius: 10px;
+      max-width: 800px;
     }
-    .testimonials h2 {
-      font-size: 2.5em;
-      color: #2b5d34;
-      margin-bottom: 20px;
-    }
-    blockquote {
+    .testimonials p {
       font-style: italic;
-      margin: 20px 0;
-      color: #333;
+      font-size: 1.2em;
     }
   </style>
 </head>
@@ -192,75 +194,51 @@
   <h1><br>All About Deforestation</h1>
 
   <h2 id="problem">Why is Deforestation a Problem?</h2>
-  <p>Deforestation is a major environmental concern that has significant impacts on biodiversity, ecosystems, and climate change. The loss of forests results in habitat destruction for countless species, many of which are endangered. Additionally, forests act as carbon sinks, helping to regulate the Earth's climate by absorbing carbon dioxide. When trees are cut down, the stored carbon is released back into the atmosphere, contributing to global warming.</p>
+  <p>Deforestation is a major environmental concern that has significant impacts on biodiversity, ecosystems, and climate change...</p>
 
   <img src="https://cdn.vectorstock.com/i/500p/82/10/poster-design-with-pollutions-on-earth-vector-27748210.jpg" alt="Deforestation example">
 
   <div class="facts" id="facts">
     <h2>Key Facts About Deforestation</h2>
     <ul>
-      <li>18 million acres of forests are lost each year, which is roughly equivalent to 27 soccer fields per minute.</li>
-      <li>Deforestation contributes to 15% of global greenhouse gas emissions, making it a major factor in climate change.</li>
-      <li>Rainforests are home to over 50% of the Earth's species, many of which are found nowhere else on the planet.</li>
-      <li>The loss of forests has a direct impact on indigenous communities that depend on them for food, medicine, and shelter.</li>
-      <li>Forests play a crucial role in the water cycle, influencing rainfall patterns and the availability of freshwater resources.</li>
+      <li>18 million acres of forests are lost each year...</li>
     </ul>
   </div>
 
-  <h2 id="actions">What Can You Do?</h2>
-  <p>Small actions can make a big difference in the fight against deforestation. By making conscious choices in our daily lives, we can contribute to preserving our planet's forests. One of the most effective ways to help is by reducing paper waste and supporting sustainable products that are certified by organizations like the Forest Stewardship Council (FSC). Additionally, consider donating to reforestation and conservation projects that are working to restore the world's forests. Every little bit helps!</p>
-  
-  <button onclick="alert('Thank you for caring about the planet!')">Take Action Now</button>
-
-  <h2>Hope for the Future</h2>
-  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate and thrive, they can recover much of the biodiversity and carbon storage capacity that was lost.</p>
-
-  <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation" width="300px">
-
-  <!-- Testimonial Section -->
+  <!-- Testimonials Section -->
   <div class="testimonials">
-    <h2>What People Are Saying</h2>
-    <blockquote>
-      "Joining a reforestation campaign changed my perspective. Every tree matters!" – Maria L.
-    </blockquote>
-    <blockquote>
-      "Deforestation impacts us all. It's time to act!" – John K.
-    </blockquote>
+    <h2>Testimonials</h2>
+    <p>"Learning about deforestation changed my perspective on environmental issues." - Sarah L.</p>
+    <p>"I started planting trees in my community after reading this site. It really inspired me!" - David K.</p>
   </div>
+
+  <h2 id="resources">Additional Resources</h2>
+  <p>To learn more about deforestation and how you can help, check out the following websites:</p>
+  <ul>
+    <li><a href="https://www.rainforest-alliance.org/" target="_blank">Rainforest Alliance</a>...</li>
+  </ul>
 
   <!-- FAQ Section -->
   <div class="faq" id="faq">
-    <h2>Frequently Asked Questions</h2>
-    <details class="faq-details">
-      <summary>Why is deforestation so widespread?</summary>
-      <p>Deforestation occurs primarily due to the demand for agricultural land, timber, and urban expansion. Unsustainable practices and illegal logging exacerbate the problem.</p>
-    </details>
-    <details class="faq-details">
-      <summary>What are the main solutions?</summary>
-      <p>Solutions include reforestation, enforcing laws against illegal logging, supporting sustainable products, and educating communities about forest conservation.</p>
-    </details>
+    <h2>Frequently Asked Questions (FAQ)</h2>
+    <div class="faq-details">
+      <summary>What causes deforestation?</summary>
+      <p>Deforestation is caused by various factors...</p>
+    </div>
   </div>
 
-  <!-- Resources -->
-  <div id="resources">
-    <h2>Resources</h2>
-    <p>To learn more about deforestation and how you can help, visit:</p>
-    <a href="https://www.worldwildlife.org/initiatives/forests">WWF Forest Initiative</a>
-    <a href="https://www.rainforest-alliance.org/">Rainforest Alliance</a>
-    <a href="https://onetreeplanted.org/">One Tree Planted</a>
-  </div>
-
+  <!-- Footer -->
   <footer>
-    <p>© 2024 All About Deforestation. All rights reserved.</p>
+    <p>🌍 Together, we can make a difference for our forests. 🌱</p>
+    <p>© 2024 All About Deforestation</p>
   </footer>
 
   <script>
-    // Progress Bar
-    window.addEventListener("scroll", function() {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      let scrolled = (scrollTop / scrollHeight) * 100;
-      document.getElementById("progress-bar").style.width = scrolled + "%";
+    window.addEventListener("scroll", function () {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progress-bar").style.width = progress + "%";
     });
   </script>
 </body>
