@@ -3,7 +3,6 @@
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* Existing styles remain unchanged */
     body {
       text-align: center;
       background-image: linear-gradient(rgb(164, 229, 122), rgb(152, 255, 247), rgb(218, 175, 130));
@@ -29,14 +28,14 @@
       margin: 20px auto;
       max-width: 800px;
     }
-    /* New button styles */
-    .top-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
+    .facts {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 800px;
     }
-    .top-buttons button {
+    button {
       background-color: #2b5d34;
       color: white;
       border: none;
@@ -44,65 +43,128 @@
       padding: 10px 20px;
       font-size: 1.2em;
       cursor: pointer;
+      margin-top: 20px;
       transition: transform 0.2s, background-color 0.2s;
     }
-    .top-buttons button:hover {
+    button:hover {
       background-color: #1f4b2e;
       transform: scale(1.1);
     }
-    /* Modal styles */
-    #contactModal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
+    img {
       width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding-top: 50px;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-top: 20px;
     }
-    #contactModalContent {
-      background-color: white;
-      margin: auto;
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    a {
+      color: #2b5d34;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .faq {
+      margin: 50px auto;
       padding: 20px;
-      border: 1px solid #888;
-      width: 50%;
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.8);
       border-radius: 10px;
     }
-    #contactModalContent input,
-    #contactModalContent textarea {
-      width: 100%;
-      margin: 10px 0;
-      padding: 10px;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+    .faq h2 {
+      text-align: center;
+      font-size: 2.5em;
     }
-    #contactModalContent button {
+    .faq-details {
+      margin: 20px 0;
+      text-align: left;
+    }
+    .faq-details summary {
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .faq-details summary:hover {
+      background-color: #d4f5d4;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    .faq-details p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+    .scroll-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .scroll-buttons button {
       background-color: #2b5d34;
       color: white;
       border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      font-size: 1.2em;
+      border-radius: 50%;
+      padding: 10px;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5em;
       cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
     }
-    #contactModalContent button:hover {
+    .scroll-buttons button:hover {
       background-color: #1f4b2e;
+      transform: scale(1.1);
     }
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 5px;
+      background-color: #2b5d34;
+      width: 0%;
+      z-index: 1000;
     }
-    .close:hover,
-    .close:focus {
-      color: black;
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #2b5d34;
+      color: white;
+      padding: 10px 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
       text-decoration: none;
-      cursor: pointer;
+      font-size: 1.2em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #2b5d34;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 2em;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      color: #d4f5d4;
     }
   </style>
 </head>
@@ -119,50 +181,88 @@
     <a href="#resources"><i class="fas fa-book"></i> Resources</a>
   </nav>
 
-  <!-- Top Buttons -->
-  <div class="top-buttons">
-    <button onclick="window.history.back()">Go Back</button>
-    <button onclick="openModal()">Contact Us</button>
-  </div>
-
   <h1><br>All About Deforestation</h1>
 
-  <!-- Modal -->
-  <div id="contactModal">
-    <div id="contactModalContent">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2>Contact Us</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
+  <h2 id="problem"><i class="fas fa-tree"></i> Why is Deforestation a Problem?</h2>
+  <p>Deforestation is a major environmental concern that has significant impacts on biodiversity, ecosystems, and climate change. The loss of forests results in habitat destruction for countless species, many of which are endangered. Additionally, forests act as carbon sinks, helping to regulate the Earth's climate by absorbing carbon dioxide. When trees are cut down, the stored carbon is released back into the atmosphere, contributing to global warming.</p>
+
+  <img src="https://cdn.vectorstock.com/i/500p/82/10/poster-design-with-pollutions-on-earth-vector-27748210.jpg" alt="Deforestation example">
+
+  <div class="facts" id="facts">
+    <h2><i class="fas fa-info-circle"></i> Key Facts About Deforestation</h2>
+    <ul>
+      <li><i class="fas fa-check"></i> 18 million acres of forests are lost each year, which is roughly equivalent to 27 soccer fields per minute.</li>
+      <li><i class="fas fa-check"></i> Deforestation contributes to 15% of global greenhouse gas emissions, making it a major factor in climate change.</li>
+      <li><i class="fas fa-check"></i> Rainforests are home to over 50% of the Earth's species, many of which are found nowhere else on the planet.</li>
+      <li><i class="fas fa-check"></i> The loss of forests has a direct impact on indigenous communities that depend on them for food, medicine, and shelter.</li>
+      <li><i class="fas fa-check"></i> Forests play a crucial role in the water cycle, influencing rainfall patterns and the availability of freshwater resources.</li>
+    </ul>
   </div>
 
-  <!-- Existing content below remains unchanged -->
-  <!-- (Continue with the original content of your page) -->
+  <h2 id="actions"><i class="fas fa-hands-helping"></i> What Can You Do?</h2>
+  <p>Small actions can make a big difference in the fight against deforestation. By making conscious choices in our daily lives, we can contribute to preserving our planet's forests. One of the most effective ways to help is by reducing paper waste and supporting sustainable products that are certified by organizations like the Forest Stewardship Council (FSC). Additionally, consider donating to reforestation and conservation projects that are working to restore the world's forests. Every little bit helps!</p>
+  
+  <button onclick="alert('Thank you for caring about the planet!')"><i class="fas fa-leaf"></i> Take Action Now</button>
+
+  <h2><i class="fas fa-hope"></i> Hope for the Future</h2>
+  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate and thrive, they can recover much of the biodiversity and carbon storage capacity that was lost.</p>
+
+  <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation" width="300px">
+  <h2 id="resources"><i class="fas fa-book"></i> Additional Resources</h2>
+<div class="facts">
+  <p>Explore these websites for more information on deforestation, its impacts, and how you can help:</p>
+  <ul>
+    <li><a href="https://www.worldwildlife.org/threats/deforestation" target="_blank">World Wildlife Fund - Deforestation</a></li>
+    <li><a href="https://www.greenpeace.org/international/act/stop-deforestation/" target="_blank">Greenpeace - Stop Deforestation</a></li>
+    <li><a href="https://www.nationalgeographic.com/environment/article/deforestation" target="_blank">National Geographic - Deforestation</a></li>
+    <li><a href="https://www.rainforest-alliance.org/insights/what-is-deforestation/" target="_blank">Rainforest Alliance - What is Deforestation?</a></li>
+    <li><a href="https://www.conservation.org/stories/11-deforestation-facts-you-need-to-know" target="_blank">Conservation International - Deforestation Facts</a></li>
+  </ul>
+</div>
+
+  <div class="faq" id="faq">
+    <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+    <div class="faq-details">
+      <details>
+        <summary>What is the biggest cause of deforestation?</summary>
+        <p>The biggest cause of deforestation is agricultural expansion, particularly for palm oil, soy, and cattle farming. These industries require large areas of land, leading to the destruction of forests to make way for crops and livestock.</p>
+      </details>
+      <details>
+        <summary>How does deforestation affect the climate?</summary>
+        <p>Deforestation contributes to climate change by releasing carbon dioxide that is stored in trees into the atmosphere. This amplifies the greenhouse effect, leading to global warming and altering weather patterns.</p>
+      </details>
+      <details>
+        <summary>Can deforestation be reversed?</summary>
+        <p>While reversing deforestation is challenging, reforestation efforts can help restore lost forests. By planting trees and protecting existing ones, we can restore habitats, capture carbon, and stabilize ecosystems.</p>
+      </details>
+    </div>
+  </div> 
+  
+  <div class="scroll-buttons">
+    <button onclick="scrollToTop()">&#8593;</button>
+    <button onclick="scrollToBottom()">&#8595;</button>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+  <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+    <i class="fa-brands fa-twitter"></i>
+  </a>
+  <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+</div>
+
+    <p>&copy; 2024 Save Our Forests. All Rights Reserved.</p>
+  </footer>
 
   <script>
-    // Modal functionality
-    function openModal() {
-      document.getElementById('contactModal').style.display = 'block';
-    }
-
-    function closeModal() {
-      document.getElementById('contactModal').style.display = 'none';
-    }
-
-    // Close the modal if the user clicks outside the content
-    window.onclick = function(event) {
-      var modal = document.getElementById('contactModal');
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    };
-
-    // Progress bar and scroll buttons remain unchanged
     window.onscroll = function() {
       var progressBar = document.getElementById('progress-bar');
       var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
