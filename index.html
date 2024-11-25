@@ -166,24 +166,6 @@
     .social-icons a:hover {
       color: #d4f5d4;
     }
-
-    .resources {
-      font-size: 1.2em;
-      margin-top: 20px;
-    }
-
-    .resources a {
-      color: #2b5d34;
-      text-decoration: none;
-    }
-
-    .resources a:hover {
-      text-decoration: underline;
-    }
-
-    .resources i {
-      margin-right: 10px;
-    }
   </style>
 </head>
 
@@ -223,55 +205,56 @@
   <button onclick="alert('Thank you for caring about the planet!')"><i class="fas fa-leaf"></i> Take Action Now</button>
 
   <h2><i class="fas fa-hope"></i> Hope for the Future</h2>
-  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate, they help restore balance to the environment and contribute to a healthier planet.</p>
+  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate and thrive, they can recover much of the biodiversity and carbon storage capacity that was lost.</p>
+
+  <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation" width="300px">
 
   <div class="faq" id="faq">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-details">
-      <summary>What is causing deforestation?</summary>
-      <p>Deforestation is mainly caused by agriculture, logging, mining, and urban expansion. As the demand for land and resources increases, forests are cleared to make way for agricultural plantations, infrastructure, and industries.</p>
+      <details>
+        <summary>What is causing deforestation?</summary>
+        <p>Deforestation is mainly caused by agriculture, logging, mining, and urban expansion. As the demand for land and resources increases, forests are cleared to make way for agricultural plantations, infrastructure, and industries.</p>
+      </details>
     </div>
     <div class="faq-details">
-      <summary>How does deforestation affect climate change?</summary>
-      <p>Deforestation contributes to climate change by releasing carbon stored in trees into the atmosphere. Forests act as carbon sinks, and when trees are destroyed, they can no longer absorb CO2, exacerbating the effects of global warming.</p>
+      <details>
+        <summary>How does deforestation affect climate change?</summary>
+        <p>Deforestation contributes to climate change by releasing carbon stored in trees into the atmosphere. Forests act as carbon sinks, and when trees are destroyed, they can no longer absorb CO2, exacerbating the effects of global warming.</p>
+      </details>
     </div>
     <div class="faq-details">
-      <summary>What are the benefits of planting trees?</summary>
-      <p>Planting trees helps absorb CO2, restore ecosystems, prevent soil erosion, improve air quality, and provide habitats for wildlife. Reforestation efforts also support local communities by improving water resources and biodiversity.</p>
+      <details>
+        <summary>What are the benefits of planting trees?</summary>
+        <p>Planting trees helps absorb CO2, restore ecosystems, prevent soil erosion, improve air quality, and provide habitats for wildlife. Reforestation efforts also support local communities by improving water resources and biodiversity.</p>
+      </details>
     </div>
-  </div>
-
-  <div class="resources" id="resources">
-    <h2><i class="fas fa-book"></i> Resources</h2>
-    <p>Learn more and take action with these helpful resources:</p>
-    <ul>
-      <li><a href="https://www.wwf.org.uk/deforestation" target="_blank"><i class="fas fa-leaf"></i> WWF: Deforestation</a></li>
-      <li><a href="https://www.rainforesttrust.org" target="_blank"><i class="fas fa-tree"></i> Rainforest Trust</a></li>
-      <li><a href="https://www.globalforestwatch.org" target="_blank"><i class="fas fa-globe"></i> Global Forest Watch</a></li>
-    </ul>
   </div>
 
   <footer>
+    <p>&copy; 2024 All Rights Reserved</p>
     <div class="social-icons">
-      <a href="https://www.instagram.com/wwf" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com/WWF" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
-    <p>&copy; 2024 All About Deforestation</p>
   </footer>
 
   <div class="scroll-buttons">
-    <button onclick="window.scrollTo(0, 0)"><i class="fas fa-arrow-up"></i></button>
-    <button onclick="window.scrollTo(0, document.body.scrollHeight)"><i class="fas fa-arrow-down"></i></button>
+    <button onclick="window.scrollTo(0, 0)">↑</button>
+    <button onclick="window.scrollTo(0, document.body.scrollHeight)">↓</button>
   </div>
 
   <script>
-    window.addEventListener('scroll', function() {
-      const progressBar = document.getElementById('progress-bar');
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrollPercentage = (scrollTop / scrollHeight) * 100;
-      progressBar.style.width = scrollPercentage + '%';
-    });
+    window.onscroll = function() {updateProgressBar()};
+
+    function updateProgressBar() {
+      let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+      let pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercentage = (scrollPosition / pageHeight) * 100;
+      document.getElementById("progress-bar").style.width = scrollPercentage + "%";
+    }
   </script>
 </body>
 </html>
