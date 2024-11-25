@@ -166,6 +166,24 @@
     .social-icons a:hover {
       color: #d4f5d4;
     }
+
+    .resources {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+
+    .resources a {
+      color: #2b5d34;
+      text-decoration: none;
+    }
+
+    .resources a:hover {
+      text-decoration: underline;
+    }
+
+    .resources i {
+      margin-right: 10px;
+    }
   </style>
 </head>
 
@@ -205,68 +223,55 @@
   <button onclick="alert('Thank you for caring about the planet!')"><i class="fas fa-leaf"></i> Take Action Now</button>
 
   <h2><i class="fas fa-hope"></i> Hope for the Future</h2>
-  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate and thrive, they can recover much of the biodiversity and carbon storage capacity that was lost.</p>
-
-  <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation" width="300px">
+  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate, they help restore balance to the environment and contribute to a healthier planet.</p>
 
   <div class="faq" id="faq">
-    <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+    <h2>Frequently Asked Questions</h2>
     <div class="faq-details">
-      <details>
-        <summary>What is the biggest cause of deforestation?</summary>
-        <p>The biggest cause of deforestation is agricultural expansion, particularly for palm oil, soy, and cattle farming. These industries require large areas of land, leading to the destruction of forests to make way for crops and livestock.</p>
-      </details>
-      <details>
-        <summary>How does deforestation affect the climate?</summary>
-        <p>Deforestation contributes to climate change by releasing carbon dioxide that is stored in trees into the atmosphere. This amplifies the greenhouse effect, leading to global warming and altering weather patterns.</p>
-      </details>
-      <details>
-        <summary>Can deforestation be reversed?</summary>
-        <p>While reversing deforestation is challenging, reforestation efforts can help restore lost forests. By planting trees and protecting existing ones, we can restore habitats, capture carbon, and stabilize ecosystems.</p>
-      </details>
+      <summary>What is causing deforestation?</summary>
+      <p>Deforestation is mainly caused by agriculture, logging, mining, and urban expansion. As the demand for land and resources increases, forests are cleared to make way for agricultural plantations, infrastructure, and industries.</p>
+    </div>
+    <div class="faq-details">
+      <summary>How does deforestation affect climate change?</summary>
+      <p>Deforestation contributes to climate change by releasing carbon stored in trees into the atmosphere. Forests act as carbon sinks, and when trees are destroyed, they can no longer absorb CO2, exacerbating the effects of global warming.</p>
+    </div>
+    <div class="faq-details">
+      <summary>What are the benefits of planting trees?</summary>
+      <p>Planting trees helps absorb CO2, restore ecosystems, prevent soil erosion, improve air quality, and provide habitats for wildlife. Reforestation efforts also support local communities by improving water resources and biodiversity.</p>
     </div>
   </div>
 
-  <div class="scroll-buttons">
-    <button onclick="scrollToTop()">&#8593;</button>
-    <button onclick="scrollToBottom()">&#8595;</button>
+  <div class="resources" id="resources">
+    <h2><i class="fas fa-book"></i> Resources</h2>
+    <p>Learn more and take action with these helpful resources:</p>
+    <ul>
+      <li><a href="https://www.wwf.org.uk/deforestation" target="_blank"><i class="fas fa-leaf"></i> WWF: Deforestation</a></li>
+      <li><a href="https://www.rainforesttrust.org" target="_blank"><i class="fas fa-tree"></i> Rainforest Trust</a></li>
+      <li><a href="https://www.globalforestwatch.org" target="_blank"><i class="fas fa-globe"></i> Global Forest Watch</a></li>
+    </ul>
   </div>
 
   <footer>
     <div class="social-icons">
-  <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-    <i class="fa-brands fa-facebook"></i>
-  </a>
-  <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-    <i class="fa-brands fa-twitter"></i>
-  </a>
-  <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
-    <i class="fa-brands fa-linkedin"></i>
-  </a>
-</div>
-
-    <p>&copy; 2024 Save Our Forests. All Rights Reserved.</p>
+      <a href="https://www.instagram.com/wwf" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/WWF" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2024 All About Deforestation</p>
   </footer>
 
+  <div class="scroll-buttons">
+    <button onclick="window.scrollTo(0, 0)"><i class="fas fa-arrow-up"></i></button>
+    <button onclick="window.scrollTo(0, document.body.scrollHeight)"><i class="fas fa-arrow-down"></i></button>
+  </div>
+
   <script>
-    window.onscroll = function() {
-      var progressBar = document.getElementById('progress-bar');
-      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrollPosition = window.scrollY;
-      progressBar.style.width = (scrollPosition / scrollHeight) * 100 + '%';
-    };
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function scrollToBottom() {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
+    window.addEventListener('scroll', function() {
+      const progressBar = document.getElementById('progress-bar');
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercentage = (scrollTop / scrollHeight) * 100;
+      progressBar.style.width = scrollPercentage + '%';
+    });
   </script>
 </body>
 </html>
-
