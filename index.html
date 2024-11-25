@@ -166,6 +166,27 @@
     .social-icons a:hover {
       color: #d4f5d4;
     }
+    .resources {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+    }
+    .resources a {
+      display: flex;
+      align-items: center;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #2b5d34;
+    }
+    .resources a:hover {
+      color: #1f4b2e;
+    }
+    .resources i {
+      margin-right: 10px;
+    }
   </style>
 </head>
 
@@ -204,57 +225,49 @@
   
   <button onclick="alert('Thank you for caring about the planet!')"><i class="fas fa-leaf"></i> Take Action Now</button>
 
-  <h2><i class="fas fa-hope"></i> Hope for the Future</h2>
-  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate and thrive, they can recover much of the biodiversity and carbon storage capacity that was lost.</p>
-
-  <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation" width="300px">
-
+  <h2><i class="fas fa-clipboard-list"></i> FAQ</h2>
   <div class="faq" id="faq">
-    <h2>Frequently Asked Questions</h2>
     <div class="faq-details">
       <details>
-        <summary>What is causing deforestation?</summary>
-        <p>Deforestation is mainly caused by agriculture, logging, mining, and urban expansion. As the demand for land and resources increases, forests are cleared to make way for agricultural plantations, infrastructure, and industries.</p>
+        <summary>What is deforestation?</summary>
+        <p>Deforestation is the process of clearing or removing forests, usually to make space for agricultural activities or urban development. This results in the loss of biodiversity and a range of environmental problems.</p>
       </details>
     </div>
     <div class="faq-details">
       <details>
-        <summary>How does deforestation affect climate change?</summary>
-        <p>Deforestation contributes to climate change by releasing carbon stored in trees into the atmosphere. Forests act as carbon sinks, and when trees are destroyed, they can no longer absorb CO2, exacerbating the effects of global warming.</p>
-      </details>
-    </div>
-    <div class="faq-details">
-      <details>
-        <summary>What are the benefits of planting trees?</summary>
-        <p>Planting trees helps absorb CO2, restore ecosystems, prevent soil erosion, improve air quality, and provide habitats for wildlife. Reforestation efforts also support local communities by improving water resources and biodiversity.</p>
+        <summary>How does deforestation affect wildlife?</summary>
+        <p>Deforestation destroys the natural habitat of many species, forcing them to migrate or face extinction. Many animals rely on forests for food, shelter, and breeding grounds.</p>
       </details>
     </div>
   </div>
 
+  <!-- Resources Section -->
+  <div class="resources" id="resources">
+    <h2><i class="fas fa-book"></i> Additional Resources</h2>
+    <a href="https://www.worldwildlife.org" target="_blank"><i class="fas fa-globe"></i> World Wildlife Fund</a>
+    <a href="https://www.wwf.org.uk/updates/10-ways-you-can-help-save-rainforests" target="_blank"><i class="fas fa-hand-holding-heart"></i> How to Help Save Rainforests</a>
+    <a href="https://www.globalforests.org" target="_blank"><i class="fas fa-leaf"></i> Global Forest Watch</a>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 All Rights Reserved</p>
+    <p>&copy; 2024 Your Website. All rights reserved.</p>
     <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
   </footer>
 
-  <div class="scroll-buttons">
-    <button onclick="window.scrollTo(0, 0)">↑</button>
-    <button onclick="window.scrollTo(0, document.body.scrollHeight)">↓</button>
-  </div>
-
   <script>
-    window.onscroll = function() {updateProgressBar()};
-
-    function updateProgressBar() {
-      let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-      let pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      let scrollPercentage = (scrollPosition / pageHeight) * 100;
-      document.getElementById("progress-bar").style.width = scrollPercentage + "%";
-    }
+    window.addEventListener("scroll", function() {
+      var progressBar = document.getElementById("progress-bar");
+      var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+      var windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrollPercentage = (scrollPosition / windowHeight) * 100;
+      progressBar.style.width = scrollPercentage + "%";
+    });
   </script>
 </body>
 </html>
