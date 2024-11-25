@@ -166,27 +166,6 @@
     .social-icons a:hover {
       color: #d4f5d4;
     }
-    .resources {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 10px;
-    }
-    .resources a {
-      display: flex;
-      align-items: center;
-      font-size: 1.5em;
-      margin-bottom: 10px;
-      text-decoration: none;
-      color: #2b5d34;
-    }
-    .resources a:hover {
-      color: #1f4b2e;
-    }
-    .resources i {
-      margin-right: 10px;
-    }
   </style>
 </head>
 
@@ -225,67 +204,57 @@
   
   <button onclick="alert('Thank you for caring about the planet!')"><i class="fas fa-leaf"></i> Take Action Now</button>
 
-  <h2><i class="fas fa-clipboard-list"></i> FAQ</h2>
+  <h2><i class="fas fa-hope"></i> Hope for the Future</h2>
+  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate and thrive, they can recover much of the biodiversity and carbon storage capacity that was lost.</p>
+
+  <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation">
+
+  <!-- FAQ Section -->
   <div class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
     <div class="faq-details">
-      <details>
-        <summary>What is deforestation?</summary>
-        <p>Deforestation is the process of clearing or removing forests, usually to make space for agricultural activities or urban development. This results in the loss of biodiversity and a range of environmental problems.</p>
-      </details>
+      <summary><img src="https://img.icons8.com/ios/50/000000/forest.png" alt="forest icon"> What are the main causes of deforestation?</summary>
+      <p>Deforestation is primarily caused by agricultural expansion, logging, mining, and infrastructure development. These activities often lead to the destruction of large areas of forests, especially in tropical regions.</p>
     </div>
+
     <div class="faq-details">
-      <details>
-        <summary>How does deforestation affect wildlife?</summary>
-        <p>Deforestation destroys the natural habitat of many species, forcing them to migrate or face extinction. Many animals rely on forests for food, shelter, and breeding grounds.</p>
-      </details>
+      <summary><img src="https://img.icons8.com/ios/50/000000/forest.png" alt="forest icon"> How does deforestation affect wildlife?</summary>
+      <p>Deforestation leads to the destruction of habitats for countless species, many of which are endangered. This can cause a decline in biodiversity, as animals lose their homes and food sources.</p>
     </div>
+
     <div class="faq-details">
-      <details>
-        <summary>What are the causes of deforestation?</summary>
-        <p>The primary causes of deforestation include agriculture, logging, mining, and infrastructure development. These activities are often driven by human demand for resources and economic growth.</p>
-      </details>
+      <summary><img src="https://img.icons8.com/ios/50/000000/forest.png" alt="forest icon"> What are the long-term effects of deforestation on the climate?</summary>
+      <p>Deforestation contributes to global warming by releasing stored carbon into the atmosphere when trees are cut down. It also reduces the Earth's capacity to absorb carbon dioxide, further exacerbating climate change.</p>
     </div>
+
     <div class="faq-details">
-      <details>
-        <summary>How can we stop deforestation?</summary>
-        <p>We can stop deforestation by promoting sustainable practices, protecting forested areas, supporting eco-friendly products, and raising awareness about the importance of forests in maintaining a healthy planet.</p>
-      </details>
-    </div>
-    <div class="faq-details">
-      <details>
-        <summary>What is reforestation?</summary>
-        <p>Reforestation is the process of replanting trees in a deforested area to restore the ecosystem, increase biodiversity, and combat climate change. It's an essential strategy for restoring forests and improving the environment.</p>
-      </details>
+      <summary><img src="https://img.icons8.com/ios/50/000000/forest.png" alt="forest icon"> What can we do to stop deforestation?</summary>
+      <p>To help stop deforestation, we can support sustainable products, reduce paper waste, donate to reforestation projects, and encourage policies that protect forests and promote sustainable land management.</p>
     </div>
   </div>
 
-  <!-- Resources Section -->
-  <div class="resources" id="resources">
-    <h2><i class="fas fa-book"></i> Additional Resources</h2>
-    <a href="https://www.worldwildlife.org" target="_blank"><i class="fas fa-globe"></i> World Wildlife Fund</a>
-    <a href="https://www.wwf.org.uk/updates/10-ways-you-can-help-save-rainforests" target="_blank"><i class="fas fa-hand-holding-heart"></i> How to Help Save Rainforests</a>
-    <a href="https://www.globalforests.org" target="_blank"><i class="fas fa-leaf"></i> Global Forest Watch</a>
+  <div class="scroll-buttons">
+    <button onclick="window.scrollTo(0, 0)">↑</button>
+    <button onclick="window.scrollTo(0, document.body.scrollHeight)">↓</button>
   </div>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Your Website. All rights reserved.</p>
     <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
+    <p>&copy; 2024 Deforestation Awareness. All Rights Reserved.</p>
   </footer>
 
   <script>
-    window.addEventListener("scroll", function() {
-      var progressBar = document.getElementById("progress-bar");
-      var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-      var windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrollPercentage = (scrollPosition / windowHeight) * 100;
-      progressBar.style.width = scrollPercentage + "%";
-    });
+    // Add progress bar functionality
+    window.onscroll = function() {
+      var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var scrollPosition = window.scrollY;
+      var scrollPercentage = (scrollPosition / scrollHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrollPercentage + '%';
+    };
   </script>
 </body>
 </html>
