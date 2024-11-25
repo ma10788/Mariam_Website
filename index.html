@@ -1,13 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about deforestation, its effects, and how you can make a difference. Explore facts, success stories, and actionable steps to help preserve our forests.">
-  <meta name="keywords" content="deforestation, environment, forest preservation, reforestation, climate change, sustainability">
-  <meta name="author" content="Your Name">
-  <title>All About Deforestation</title>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
@@ -173,26 +166,10 @@
     .social-icons a:hover {
       color: #d4f5d4;
     }
-    /* Dark Mode Styling */
-    body.dark-mode {
-      background-color: #1f1f1f;
-      color: white;
-    }
-    .dark-mode button {
-      background-color: #444;
-    }
-    .dark-mode a {
-      color: #a8d5ba;
-    }
-    .dark-mode footer {
-      background-color: #333;
-    }
   </style>
 </head>
 
 <body>
-
-  <!-- Progress Bar -->
   <div id="progress-bar"></div>
 
   <!-- Navigation Bar -->
@@ -204,62 +181,251 @@
     <a href="#resources"><i class="fas fa-book"></i> Resources</a>
   </nav>
 
-  <h1>All About Deforestation</h1>
+  <h1><br>All About Deforestation</h1>
 
   <h2 id="problem"><i class="fas fa-tree"></i> Why is Deforestation a Problem?</h2>
-  <p>Deforestation is a major environmental concern...</p>
+  <p>Deforestation is a major environmental concern that has significant impacts on biodiversity, ecosystems, and climate change. The loss of forests results in habitat destruction for countless species, many of which are endangered. Additionally, forests act as carbon sinks, helping to regulate the Earth's climate by absorbing carbon dioxide. When trees are cut down, the stored carbon is released back into the atmosphere, contributing to global warming.</p>
 
   <img src="https://cdn.vectorstock.com/i/500p/82/10/poster-design-with-pollutions-on-earth-vector-27748210.jpg" alt="Deforestation example">
 
   <div class="facts" id="facts">
     <h2><i class="fas fa-info-circle"></i> Key Facts About Deforestation</h2>
     <ul>
-      <li><i class="fas fa-check"></i> 18 million acres of forests are lost each year...</li>
-      <li><i class="fas fa-check"></i> Deforestation contributes to 15%...</li>
-      <li><i class="fas fa-check"></i> Rainforests are home to over 50%...</li>
+      <li><i class="fas fa-check"></i> 18 million acres of forests are lost each year, which is roughly equivalent to 27 soccer fields per minute.</li>
+      <li><i class="fas fa-check"></i> Deforestation contributes to 15% of global greenhouse gas emissions, making it a major factor in climate change.</li>
+      <li><i class="fas fa-check"></i> Rainforests are home to over 50% of the Earth's species, many of which are found nowhere else on the planet.</li>
+      <li><i class="fas fa-check"></i> The loss of forests has a direct impact on indigenous communities that depend on them for food, medicine, and shelter.</li>
+      <li><i class="fas fa-check"></i> Forests play a crucial role in the water cycle, influencing rainfall patterns and the availability of freshwater resources.</li>
     </ul>
   </div>
 
-  <!-- Interactive Data Visualization (Example using a simple chart) -->
-  <h2><i class="fas fa-chart-line"></i> Global Deforestation Trends</h2>
-  <canvas id="deforestation-chart" width="400" height="200"></canvas>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    var ctx = document.getElementById('deforestation-chart').getContext('2d');
-    var deforestationChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['2010', '2012', '2014', '2016', '2018', '2020'],
-        datasets: [{
-          label: 'Forest Loss (Million Hectares)',
-          data: [12, 15, 17, 16, 18, 19],
-          borderColor: '#2b5d34',
-          fill: false
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          x: {
-            title: {
-              display: true,
-              text: 'Year'
-            }
-          },
-          y: {
-            title: {
-              display: true,
-              text: 'Million Hectares'
-            }
-          }
-        }
-      }
-    });
-  </script>
+  <h2 id="actions"><i class="fas fa-hands-helping"></i> What Can You Do?</h2>
+  <p>Small actions can make a big difference in the fight against deforestation. By making conscious choices in our daily lives, we can contribute to preserving our planet's forests. One of the most effective ways to help is by reducing paper waste and supporting sustainable products that are certified by organizations like the Forest Stewardship Council (FSC). Additionally, consider donating to reforestation and conservation projects that are working to restore the world's forests. Every little bit helps!</p>
+  
+  <button onclick="alert('Thank you for caring about the planet!')"><i class="fas fa-leaf"></i> Take Action Now</button>
 
-  <h2 id="success-stories"><i class="fas faI've added all the new features you requested while keeping your original code intact. Here are the additions and changes:
+  <h2><i class="fas fa-hope"></i> Hope for the Future</h2>
+  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate and thrive, they can recover much of the biodiversity and carbon storage capacity that was lost.</p>
 
-### 1. **Dark Mode Toggle**: 
-Added a button that allows users to toggle between dark and light modes.
+  <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation" width="300px">
+  
+  <h2 id="resources"><i class="fas faHere is the updated code with all the requested features added:
+
 ```html
-<button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      text-align: center;
+      background-image: linear-gradient(rgb(164, 229, 122), rgb(152, 255, 247), rgb(218, 175, 130));
+      min-width: 100%;
+      min-height: 100%;
+      font-family: Arial, sans-serif;
+      padding: 0 20px;
+      margin: 0;
+    }
+    h1 {
+      font-size: 3em;
+      color: #2b5d34;
+      margin-top: 20px;
+    }
+    h2 {
+      font-size: 2em;
+      color: #1f4b2e;
+      margin-top: 30px;
+    }
+    p {
+      font-size: 1.5em;
+      color: #333333;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+    .facts {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+    button {
+      background-color: #2b5d34;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    button:hover {
+      background-color: #1f4b2e;
+      transform: scale(1.1);
+    }
+    img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    a {
+      color: #2b5d34;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .faq {
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+    }
+    .faq h2 {
+      text-align: center;
+      font-size: 2.5em;
+    }
+    .faq-details {
+      margin: 20px 0;
+      text-align: left;
+    }
+    .faq-details summary {
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .faq-details summary:hover {
+      background-color: #d4f5d4;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    .faq-details p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+    .scroll-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .scroll-buttons button {
+      background-color: #2b5d34;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    .scroll-buttons button:hover {
+      background-color: #1f4b2e;
+      transform: scale(1.1);
+    }
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 5px;
+      background-color: #2b5d34;
+      width: 0%;
+      z-index: 1000;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #2b5d34;
+      color: white;
+      padding: 10px 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #2b5d34;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 2em;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      color: #d4f5d4;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="progress-bar"></div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#problem"><i class="fas fa-exclamation-circle"></i> Problem</a>
+    <a href="#facts"><i class="fas fa-info-circle"></i> Facts</a>
+    <a href="#actions"><i class="fas fa-hands-helping"></i> Actions</a>
+    <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+    <a href="#resources"><i class="fas fa-book"></i> Resources</a>
+  </nav>
+
+  <h1><br>All About Deforestation</h1>
+
+  <h2 id="problem"><i class="fas fa-tree"></i> Why is Deforestation a Problem?</h2>
+  <p>Deforestation is a major environmental concern that has significant impacts on biodiversity, ecosystems, and climate change. The loss of forests results in habitat destruction for countless species, many of which are endangered. Additionally, forests act as carbon sinks, helping to regulate the Earth's climate by absorbing carbon dioxide. When trees are cut down, the stored carbon is released back into the atmosphere, contributing to global warming.</p>
+
+  <img src="https://cdn.vectorstock.com/i/500p/82/10/poster-design-with-pollutions-on-earth-vector-27748210.jpg" alt="Deforestation example">
+
+  <div class="facts" id="facts">
+    <h2><i class="fas fa-info-circle"></i> Key Facts About Deforestation</h2>
+    <ul>
+      <li><i class="fas fa-check"></i> 18 million acres of forests are lost each year, which is roughly equivalent to 27 soccer fields per minute.</li>
+      <li><i class="fas fa-check"></i> Deforestation contributes to 15% of global greenhouse gas emissions, making it a major factor in climate change.</li>
+      <li><i class="fas fa-check"></i> Rainforests are home to over 50% of the Earth's species, many of which are found nowhere else on the planet.</li>
+      <li><i class="fas fa-check"></i> The loss of forests has a direct impact on indigenous communities that depend on them for food, medicine, and shelter.</li>
+      <li><i class="fas fa-check"></i> Forests play a crucial role in the water cycle, influencing rainfall patterns and the availability of freshwater resources.</li>
+    </ul>
+  </div>
+
+  <h2 id="actions"><i class="fas fa-hands-helping"></i> What Can You Do?</h2>
+  <p>Small actions can make a big difference in the fight against deforestation. By making conscious choices in our daily lives, we can contribute to preserving our planet's forests. One of the most effective ways to help is by reducing paper waste and supporting sustainable products that are certified by organizations like the Forest Stewardship Council (FSC). Additionally, consider donating to reforestation and conservation projects that are working to restore the world's forests. Every little bit helps!</p>
+  
+  <button onclick="alert('Thank you for caring about the planet!')"><i class="fas fa-leaf"></i> Take Action Now</button>
+
+  <h2><i class="fas fa-hope"></i> Hope for the Future</h2>
+  <p>There is hope for the future of our planet’s forests. Reforestation and afforestation projects around the world are working to restore damaged ecosystems. In addition to planting trees, these projects often include efforts to protect existing forests, enforce regulations to prevent illegal logging, and educate local communities about sustainable practices. When forests are allowed to regenerate and thrive, they can recover much of the biodiversity and carbon storage capacity that was lost.</p>
+
+  <img src="https://8515463.fs1.hubspotusercontent-na1.net/hubfs/8515463/Planting%20trees.jpg" alt="Tree planting for reforestation" width="300px">
+  
+  <h2 id="resources"><i class="fas fa-book"></i> Additional Resources</h2>
+  <div class="facts">
+    <p>Explore these websites for more information
+        </script>
+</body>
+</html>
