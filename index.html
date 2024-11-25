@@ -211,62 +211,53 @@
 
   <div class="faq" id="faq">
     <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
-    <div class="faq-details">
-      <details>
-        <summary>What is the biggest cause of deforestation?</summary>
-        <p>The biggest cause of deforestation is agricultural expansion, particularly for palm oil, soy, and cattle farming. These industries require large areas of land, leading to the destruction of forests to make way for crops and livestock.</p>
-      </details>
-      <details>
-        <summary>How does deforestation affect the climate?</summary>
-        <p>Deforestation contributes to climate change by releasing carbon dioxide that is stored in trees into the atmosphere. This amplifies the greenhouse effect, leading to global warming and altering weather patterns.</p>
-      </details>
-      <details>
-        <summary>Can deforestation be reversed?</summary>
-        <p>While reversing deforestation is challenging, reforestation efforts can help restore lost forests. By planting trees and protecting existing ones, we can restore habitats, capture carbon, and stabilize ecosystems.</p>
-      </details>
-    </div>
+    <details class="faq-details">
+      <summary>What causes deforestation?</summary>
+      <p>Deforestation is primarily caused by human activities, including logging, agricultural expansion, urban development, and mining. The demand for wood products, land for farming, and urbanization have led to the widespread destruction of forests.</p>
+    </details>
+    <details class="faq-details">
+      <summary>How does deforestation affect climate change?</summary>
+      <p>When trees are cut down, they release stored carbon dioxide into the atmosphere. This contributes to global warming, as carbon dioxide is a major greenhouse gas. Forests also absorb carbon dioxide, so when forests are lost, the Earth's ability to regulate climate is diminished.</p>
+    </details>
+    <details class="faq-details">
+      <summary>What are the consequences of deforestation for wildlife?</summary>
+      <p>Forests provide essential habitat for countless species. As forests are destroyed, many animals lose their homes, food sources, and safety. This leads to the endangerment and extinction of numerous species, especially those that are highly specialized to live in specific forest environments.</p>
+    </details>
   </div>
 
-  <div class="scroll-buttons">
-    <button onclick="scrollToTop()">&#8593;</button>
-    <button onclick="scrollToBottom()">&#8595;</button>
+  <!-- Additional Resources -->
+  <div id="resources">
+    <h2><i class="fas fa-book"></i> Additional Resources</h2>
+    <p>Here are some additional resources to help you learn more about deforestation and how you can help:</p>
+    <ul>
+      <li><a href="https://www.worldwildlife.org/threats/deforestation" target="_blank">World Wildlife Fund (WWF) - Deforestation</a></li>
+      <li><a href="https://www.greenpeace.org/international/issues/forests/" target="_blank">Greenpeace - Forests</a></li>
+      <li><a href="https://www.un.org/sustainabledevelopment/forests/" target="_blank">United Nations - Sustainable Development Goal 15: Life on Land</a></li>
+      <li><a href="https://www.wwf.org.uk/what-we-do/deforestation" target="_blank">WWF UK - Deforestation Solutions</a></li>
+      <li><a href="https://www.treesforlife.org.uk/our-work/plant-a-tree/" target="_blank">Trees for Life - Plant a Tree</a></li>
+    </ul>
   </div>
 
+  <!-- Footer with Social Media Icons -->
   <footer>
+    <p>Follow us on social media for more updates:</p>
     <div class="social-icons">
-  <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-    <i class="fa-brands fa-facebook"></i>
-  </a>
-  <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-    <i class="fa-brands fa-twitter"></i>
-  </a>
-  <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
-    <i class="fa-brands fa-linkedin"></i>
-  </a>
-</div>
-
-    <p>&copy; 2024 Save Our Forests. All Rights Reserved.</p>
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
   </footer>
 
   <script>
-    window.onscroll = function() {
-      var progressBar = document.getElementById('progress-bar');
-      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrollPosition = window.scrollY;
-      progressBar.style.width = (scrollPosition / scrollHeight) * 100 + '%';
-    };
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function scrollToBottom() {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
+    // Add smooth scrolling
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
   </script>
 </body>
 </html>
-
